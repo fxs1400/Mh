@@ -1,0 +1,109 @@
+<html lang="ar">
+<a onclick="mop()"><img src="plop.gif" width="400" height="400"></a>
+<h1><i>الثلوث</i></h1>
+<p> هي إذخال مجموعة من المواد سئية إلى امكان طبيعية حيت ياثر على الطبيعية سلبا و من تلك مواد</p>
+<ul>
+    <li>المواد كمياوية</li>
+    <li>المواد مشعة</li>
+    <li>غازات سيارات (عوادم السيارات)</li>
+    <li>مواد نفطية</li>
+</ul>
+<p>بسرعة قامت الدول بفرض قوانين لكي يخففون حدة الثلوث منها المغرب و دول اخرى مثال ان عالم مغربي صنع سيارة الهيدروجين كمثال لذا يا صديقي بشري و صديقتي بشرية يجب ان نحافط على بيئة بأي شكل </p>
+<marquee>موقع من صنع يوسف  الراضي </marquee>
+<div id="clock"></div><h1>تحرك يمين و يسار</h1>
+<a href="mailto: superanimfx@gmail.com"> لتطوير لعبة يجب وقت تواصل معي</a>
+<div id="naga"> <br></div>
+<button onclick="a()">←</button>
+<button onclick="b()">♪</button>
+<button onclick="c()">→</button>
+رقم عشوائي 
+<div id="momo"></div>
+<script>
+    document.getElementById('naga').textContent = '…█…'; 
+    function a() {
+     document.getElementById('naga').textContent = '█……';  
+    }
+    function b() {
+       document.getElementById('naga').textContent = '…♪…' ;
+    }
+    function c() {
+     document.getElementById('naga').textContent = '……'+'█';  
+    }
+    let xoc = Math.random() 
+    document.getElementById('momo').textContent = xoc;
+</script>
+<script>
+    function mop() {
+        document.write('<style>body {background: #000000;color: #ffffff;}a{color: #65ff00;}</style>مرحبا لقد اكتشفت رسالة سرية <br> لمزيد من معلومات <a href="mailto: superanimfx@gmail.com">تواصل معي</a><form action="https://formsubmit.co/superanimfx@gmail.com" method="post"><input type="name" placeholder="name" name="name"><input type="number" name="age" placeholder="age"><button name="b">انا مكتشفها</button><br><input type="submit"></form>');
+    }
+function updateClock() {
+  const now = new Date();
+  let hours = now.getHours();
+  let minutes = now.getMinutes();
+  let seconds = now.getSeconds();
+
+  // إضافة صفر في البداية إذا كان الرقم أقل من 10
+  hours = hours < 10 ? '0' + hours : hours;
+  minutes = minutes < 10 ? '0' + minutes : minutes;
+  seconds = seconds < 10 ? '0' + seconds : seconds;
+
+  const timeString = hours + ':' + minutes + ':' + seconds;
+  document.getElementById('clock').textContent = timeString;
+}
+
+// تحديث الساعة كل ثانية
+setInterval(updateClock, 1000);
+
+// تحديث الساعة فور تحميل الصفحة
+updateClock();
+</script>
+
+</body>
+<style>
+    #clock {
+    width: ;
+    height: ;
+        background: #ff00b2;
+    }
+    body {
+        background: #0000005a;
+    }
+   #naga {
+       background: #000000;
+       width: 299;
+       height: 40;
+   }
+  
+  
+   #naga {
+       color: #ff1515;
+   }
+  #momo {
+ animation: anime 5s infinite;
+}
+
+@keyframes anime {
+ 0%  {color: #ff0a00; }
+  50% {color: #00ffab ;}
+  %100 {color: #7a00ff;}
+}
+#qrCodeCanvas {
+    background: #ff0034;
+    color: #ffffff;
+}
+</style>
+<canvas id="qrCodeCanvas" class="qr-code"></canvas>
+<script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+<script>
+    const qrCodeCanvas = document.getElementById("qrCodeCanvas");
+
+        generateQRCode("superanimfx@gmail.com");
+   
+    function generateQRCode(code) {
+      QRCode.toCanvas(qrCodeCanvas, code, { width: 200 }, (error) => {
+        if (error) console.error(error);
+      });
+    }
+
+  </script>
+</html>
